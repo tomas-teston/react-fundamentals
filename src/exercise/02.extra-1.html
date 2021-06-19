@@ -1,7 +1,6 @@
 <!-- Intro to raw React APIs -->
-<!-- http://localhost:3000/isolated/exercise/02.html -->
-
-
+<!-- 💯 nesting elements -->
+<!-- http://localhost:3000/isolated/final/02.extra-1.html -->
 
 <body>
   <div id="root"></div>
@@ -11,7 +10,11 @@
     const rootElement = document.getElementById('root');
     const element = React.createElement('div', {
       className: 'container',
-      children: 'Hello World'
+      children: [
+        React.createElement('span', null, 'Hello'),
+        ' ',
+        React.createElement('span', null, 'World')
+      ]
     });
     ReactDOM.render(element, rootElement);
   </script>
